@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Management System</title>
+    <link href="Login.html" alt="Login-Details">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #4CAF50;
+            padding: 20px;
+            text-align: center;
+            color: white;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #333;
+        }
+        nav a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            text-align: center;
+        }
+        nav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+        main {
+            padding: 20px;
+            text-align: center;
+        }
+        .page-link {
+            margin: 10px;
+            padding: 20px;
+            background-color: #4CAF50;
+            color: white;
+            border-radius: 5px;
+            text-decoration: none;
+            display: inline-block;
+        }
+        .page-link:hover {
+            background-color: #45a049;
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #333;
+            color: white;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Welcome to the Library Management System</h1>
+</header>
+
+<nav>
+    <a href="#">Home</a>
+    <a href="#membership">Student Membership</a>
+    <a href="#catalog">Books Catalog</a>
+    <a href="#transactions">Transactions</a>
+    <a href="#search">Search</a>
+</nav>
+
+<main>
+    <section id="home">
+        <h2>Home</h2>
+        <p>Use the navigation menu to manage student memberships, view the book catalog, handle transactions, or search for books.</p>
+    </section>
+    <section id="membership">
+        <h2>Student Membership</h2>
+        <a class="page-link" href="Login.html">Add New Member</a>
+        <a class="page-link" href="viewer.html">View Members</a>
+    </section>
+    <section id="catalog">
+        <h2>Books Catalog</h2>
+        <a class="page-link" href="allbooks.html">View All Books</a>
+        <a class="page-link" href="addbooks.html">Add New Book</a>
+    </section>
+    <section id="transactions">
+        <h2>Transactions</h2>
+        <a class="page-link" href="borrow.html">Borrow a Book</a>
+        <a class="page-link" href="return.html">Return a Book</a>
+    </section>
+    <section id="search">
+        <h2>Search Books</h2>
+        <form id="searchForm" onsubmit="return searchBooks(event);">
+            <input type="text" id="searchInput" placeholder="Enter book title or author" required>
+            <button type="submit">Search</button>
+        </form>
+        <br><br>
+        <script>
+            function searchBooks(event) {
+                event.preventDefault(); // Prevent the form from submitting normally
+                const query = document.getElementById('searchInput').value; // Get the input value
+                const googleSearchUrl = `https://www.google.com/search?q=${encodeURIComponent(query)}`; // Construct the Google search URL
+                window.open(googleSearchUrl, '_blank'); // Open the search in a new tab
+                return false; // Prevent default form submission
+            }
+        </script>
+    </section>
+
+    <footer>
+       <p>&copy; 2024 Library Management System</p>
+    </footer>
+</main>
+</body>
+</html>
+

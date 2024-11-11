@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Books</title>
+    <link rel="stylesheet" href="addbooks.css">
+</head>
+<body>
+    <header>
+        <h1>Add a New Book</h1>
+    </header>
+
+    <div class="form-container">
+        <form id="bookForm">
+            <label for="bookName">Name of the Book:</label>
+            <input type="text" id="bookName" required>
+
+            <label for="publisher">Publisher:</label>
+            <input type="text" id="publisher" required>
+
+            <label for="dateOfManufacture">Date of Manufacture:</label>
+            <input type="date" id="dateOfManufacture" required>
+
+            <label for="pricing">Pricing:</label>
+            <input type="number" id="pricing" required>
+
+            <label for="famousDialogue">Famous Dialogue:</label>
+            <input type="text" id="famousDialogue" required>
+
+            <button type="submit">Add Book</button>
+        </form>
+    </div>
+
+    <div class="button-container">
+        <button class="nav-button" onclick="goToAllBooks()">View All Books</button>
+    </div>
+
+    <footer>
+        <button class="back-button" onclick="goBack()">Home Screen</button>
+    </footer>
+
+    <script>
+        function goBack() {
+            window.location.href = "index.html"; // Redirect to index.html
+        }
+
+        function goToAllBooks() {
+            window.location.href = "allbooks.html"; // Redirect to allbooks.html
+        }
+
+        document.getElementById("bookForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent default form submission
+
+            // Get form values
+            const bookName = document.getElementById("bookName").value;
+            const publisher = document.getElementById("publisher").value;
+            const dateOfManufacture = document.getElementById("dateOfManufacture").value;
+            const pricing = document.getElementById("pricing").value;
+            const famousDialogue = document.getElementById("famousDialogue").value;
+
+            // Here you can implement the logic to save the book details
+            // For example, you can send the data to a server or store it in localStorage
+            
+            alert(`Book Added: ${bookName}`);
+            this.reset(); // Reset form fields after submission
+        });
+    </script>
+</body>
+</html>

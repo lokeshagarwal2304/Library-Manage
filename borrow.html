@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Borrow a Book - Library Management System</title>
+    <link rel="stylesheet" href="borrow.css">
+</head>
+<body>
+    <header>
+        <h1>Library Management System</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Student Service</a></li>
+                <li><a href="allbooks.html">Digital Library</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h2>Borrow a Book</h2>
+        <form id="borrowForm">
+            <label for="name">Name of the Candidate:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <label for="year">Year of Study/College & Branch:</label>
+            <input type="text" id="year" name="year" required>
+
+            <label for="date">Date of Borrowing:</label>
+            <input type="date" id="date" name="date" required>
+
+            <label for="photo">Upload Your Photo:</label>
+            <input type="file" id="photo" name="photo" accept="image/*" required>
+
+            <label for="signature">Digital Signature:</label>
+            <input type="file" id="signature" name="signature" accept="image/*" required>
+
+            <button type="submit">Submit</button>
+        </form>
+        <a href="index.html" class="back-button">Back</a>
+    </div>
+
+    <footer>
+        <p>@Library Management System</p>
+    </footer>
+
+    <script src="borrow.js"></script>
+</body>
+</html>

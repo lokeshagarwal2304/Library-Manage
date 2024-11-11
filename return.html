@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Return a Book - Library Management System</title>
+    <link rel="stylesheet" href="return.css">
+</head>
+<body>
+    <header>
+        <h1>Library Management System</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Student Service</a></li>
+                <li><a href="digital-library.html">Digital Library</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h2>Return a Book</h2>
+        <form id="returnForm">
+            <label for="name">Name of the Candidate:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <label for="returnDate">Date of Return:</label>
+            <input type="date" id="returnDate" name="returnDate" required>
+
+            <button type="submit">Return Book</button>
+        </form>
+        <a href="index.html" class="back-button">Back</a>
+    </div>
+
+    <footer>
+        <p>@Library Management System</p>
+    </footer>
+
+    <script src="return.js"></script>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Member Viewer</title>
+    <link rel="stylesheet" href="viewer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <h1>Library Management</h1>
+    </header>
+    <div class="container">
+        <h2>OUR MEMBERS</h2>
+        
+        <div class="members">
+            <div class="member">
+                <img src="https://via.placeholder.com/150" alt="Member 1">
+                <h3>Member 1</h3>
+                <p>Role: Developer</p>
+                <p>Email: member1@example.com</p>
+                <p>Phone: (123) 456-7890</p>
+                <button class="checkout-button">Check Out</button>
+            </div>
+            <div class="member">
+                <img src="https://via.placeholder.com/150" alt="Member 2">
+                <h3>Member 2</h3>
+                <p>Role: Designer</p>
+                <p>Email: member2@example.com</p>
+                <p>Phone: (123) 456-7891</p>
+                <button class="checkout-button">Check Out</button>
+            </div>
+            <div class="member">
+                <img src="https://via.placeholder.com/150" alt="Member 3">
+                <h3>Member 3</h3>
+                <p>Role: Project Manager</p>
+                <p>Email: member3@example.com</p>
+                <p>Phone: (123) 456-7892</p>
+                <button class="checkout-button">Check Out</button>
+            </div>
+            <div class="member">
+                <img src="https://via.placeholder.com/150" alt="Member 4">
+                <h3>Member 4</h3>
+                <p>Role: QA Engineer</p>
+                <p>Email: member4@example.com</p>
+                <p>Phone: (123) 456-7893</p>
+                <button class="checkout-button">Check Out</button>
+            </div>
+        </div>
+    </div>
+    <div>
+        <button class="back-button" onclick="goBack()">
+            <i class="fas fa-arrow-left"></i> Back
+        </button>
+        <script>
+            function goBack() {
+                window.location.href = 'index.html'; // Redirect to main.html
+            }
+        </script>
+    </div>
+    
+    <footer>
+        <p>Created By Library Management</p>
+        <p>This library management system is designed to help you manage your library efficiently. It allows you to keep track of members, books, and transactions, ensuring that your library runs smoothly and effectively. Our goal is to provide the best possible experience for both library staff and patrons.</p>
+    </footer>
+</body>
+</html>
